@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/main_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/search_image"
+                            android:background="@android:color/transparent"
+                            android:hint="Buscar soluciones"
+                            android:inputType="textNoSuggestions"
+                            android:padding="5dp"
+                            android:text="" />
+
+                        <ImageView
+                            android:id="@+id/search_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            app:srcCompat="@drawable/ic_search_light_blue_24dp" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Producto"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Nombre:"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Ingediente Activo:"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Marca comercial:"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Topexatin 600F"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/product_view_pager"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp" />
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/circle_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignEnd="@+id/product_view_pager"
+                        android:layout_alignTop="@+id/product_view_pager"
+                        android:layout_margin="10dp"
+                        android:layout_marginEnd="5dp"
+                        app:ci_drawable="@drawable/ci_indicator_selected"
+                        app:ci_drawable_unselected="@drawable/ci_indicator_unselected"
+                        app:ci_margin="5dp" />
+
+                    <ImageView
+                        android:id="@+id/right_arrow"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignEnd="@+id/product_view_pager"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_navigate_next_black_24dp" />
+
+                    <ImageView
+                        android:id="@+id/left_arrow"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignStart="@+id/product_view_pager"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="12dp"
+                        android:padding="5dp"
+                        android:rotation="180"
+                        app:srcCompat="@drawable/ic_navigate_next_black_24dp" />
+                </RelativeLayout>
+
+                <!-- <ImageView
+                     android:id="@+id/image_product_thumb"
+                     android:layout_width="120dp"
+                     android:layout_height="120dp"
+                     android:layout_gravity="center_horizontal"
+                     android:layout_margin="20dp"
+                     android:background="@drawable/product_detail_bg"
+                     android:padding="10dp"
+                     android:src="@drawable/ic_farm_product" />
+ -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Descripción:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/product_info_row" />
+
+                    <include layout="@layout/product_info_row" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Familia:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Recomendación:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Modo de acción:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Productos relacionados"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/left_recycler_arrow"
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="0.1"
+                        android:padding="5dp"
+                        android:rotation="180"
+                        app:srcCompat="@drawable/ic_navigate_next_black_24dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/related_product_recycler"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="4dp"
+                        android:layout_weight="0.8" />
+
+                    <ImageView
+                        android:id="@+id/right_recycler_arrow"
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="0.1"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_navigate_next_black_24dp" />
+
+                </LinearLayout>
+
+
+                <!--    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ic_farm_product" />
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ic_farm_product" />
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ic_farm_product" />
+
+                    </LinearLayout>-->
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

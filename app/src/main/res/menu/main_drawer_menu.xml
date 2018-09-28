@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <group android:id="@+id/menu_group">
+        <item
+            android:id="@+id/action_farming"
+            android:icon="@drawable/ic_search_light_blue_24dp"
+            android:title="Mi cultivo" />
+        <item
+            android:id="@+id/action_calendar"
+            android:icon="@drawable/ic_search_light_blue_24dp"
+            android:title="Calendario" />
+        <item
+            android:id="@+id/action_catalogue"
+            android:icon="@drawable/ic_search_light_blue_24dp"
+            android:title="Catálogo" />
+        <item
+            android:id="@+id/action_office"
+            android:icon="@drawable/ic_search_light_blue_24dp"
+            android:title="Sucursales" />
+        <item
+            android:id="@+id/action_promotion"
+            android:icon="@drawable/ic_search_light_blue_24dp"
+            android:title="Promociones" />
+        <item
+            android:id="@+id/action_news"
+            android:icon="@drawable/ic_search_light_blue_24dp"
+            android:title="Noticias" />
+
+        <item
+            android:id="@+id/action_questions"
+            android:icon="@drawable/ic_search_light_blue_24dp"
+            android:title="Preguntas frecuentes" />
+        <item
+            android:id="@+id/action_clients"
+            android:icon="@drawable/ic_search_light_blue_24dp"
+            android:title="Club cliente" />
+        <item
+            android:id="@+id/action_contact"
+            android:icon="@drawable/ic_search_light_blue_24dp"
+            android:title="Contacto" />
+
+    </group>
+
+</menu>
